@@ -14,10 +14,12 @@ A dynamic, responsive form for collecting user data including Name, Email, Phone
 * **Profile Upload:** Supports image attachment with real-time base64 encoding and 5MB size limit validation to secure the backend API.
 * **Async Email Checking:** Validates against the backend database in real-time to prevent duplicate email registrations before form submission.
 
-![สร้างรหัสสินค้า](docs/images/001.png)
+![ฟอร์มผู้ใช้](docs/images/001.png)
 
 ### 2. Success Notification (IT 04-2 View)
 Upon successful registration, the form smoothly resets and displays a temporary floating success banner with the generated database ID (e.g., `save data success Id : 00001`). The notification automatically hides after 5 seconds using Angular's NgZone timeout tracking.
+
+![แจ้งเตือนผู้ใช้](docs/images/002.png)
 
 ---
 
