@@ -79,7 +79,7 @@ RegisterIT0401-fe/           # Angular 18 Frontend Application
 1. Open the backend solution in Visual Studio 2022 / JetBrains Rider / VS Code.
 2. Navigate to the backend application directory:
    ```bash
-   cd RegisterIT0401/RegisterIT0401-be/RegisterIT0401
+   cd RegisterIT0401-be/RegisterIT0401
    ```
 3. Restore NuGet packages and run:
    ```bash
@@ -92,7 +92,7 @@ RegisterIT0401-fe/           # Angular 18 Frontend Application
 
 1. Navigate to the frontend directory:
    ```bash
-   cd RegisterIT0401/RegisterIT0401-fe
+   cd RegisterIT0401-fe
    ```
 2. Install dependencies:
    ```bash
