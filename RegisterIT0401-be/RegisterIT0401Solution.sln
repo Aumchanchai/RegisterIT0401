@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterIT0401", "RegisterIT0401\RegisterIT0401.csproj", "{293E5A2C-F0FC-4BBC-82A0-901415682B0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{E5B21BB7-238E-468C-9C49-8802EBCDD08E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{293E5A2C-F0FC-4BBC-82A0-901415682B0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{293E5A2C-F0FC-4BBC-82A0-901415682B0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{293E5A2C-F0FC-4BBC-82A0-901415682B0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{293E5A2C-F0FC-4BBC-82A0-901415682B0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5B21BB7-238E-468C-9C49-8802EBCDD08E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5B21BB7-238E-468C-9C49-8802EBCDD08E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5B21BB7-238E-468C-9C49-8802EBCDD08E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5B21BB7-238E-468C-9C49-8802EBCDD08E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

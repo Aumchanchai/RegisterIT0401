@@ -1,0 +1,157 @@
+:host {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.main-wrapper {
+  border: 2px solid #000;
+  margin: 20px auto;
+  max-width: 800px;
+  background-color: #fff;
+}
+
+.header {
+  background-color: #00b050; 
+  color: #000;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  border-bottom: 2px solid #000;
+}
+
+.relative-container {
+  padding: 30px 40px;
+  min-height: 450px;
+  position: relative;
+}
+
+.success-box {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #a9d18e;
+  border: 1px solid #7cb342;
+  padding: 15px;
+  border-radius: 8px;
+  color: #000;
+  font-size: 14px;
+  min-width: 200px;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.form-grid {
+  display: flex;
+  gap: 60px;
+}
+
+.column {
+  flex: 1;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+input[type="text"], input[type="email"], input[type="date"], select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+select {
+  appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg fill="gray" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 8px center;
+  background-color: #fff;
+}
+
+.file-input-wrapper {
+  display: flex;
+}
+
+.file-input-wrapper input[type="text"] {
+  border-right: none;
+}
+
+.browse-btn {
+  background-color: #b2b2b2;
+  border: 1px solid #000;
+  padding: 8px 20px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.error-text {
+  color: red;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+.radio-group label {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.radios {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.radios input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-color: #b2b2b2;
+  position: relative;
+  cursor: pointer;
+}
+
+.radios input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.save-btn {
+  background-color: #70ad47;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clear-btn {
+  background-color: #a6a6a6;
+  color: white;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}

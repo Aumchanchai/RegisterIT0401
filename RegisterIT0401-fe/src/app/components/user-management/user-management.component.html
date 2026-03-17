@@ -1,0 +1,117 @@
+<div class="main-wrapper">
+  <div class="header">
+    <span *ngIf="!successMessage">IT 04-1</span>
+    <span *ngIf="successMessage">IT 04-2</span>
+  </div>
+
+  <div class="container relative-container">
+    <!-- Success Notification Box -->
+    <div class="success-box" *ngIf="successMessage">
+      {{ successMessage }}
+    </div>
+
+    <form [formGroup]="userForm" (ngSubmit)="onSave()">
+      <div class="form-grid">
+        <!-- Left Column -->
+        <div class="column">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" formControlName="firstName" name="firstName" autocomplete="given-name" maxlength="100">
+            <div class="error-text" *ngIf="userForm.get('firstName')?.invalid && userForm.get('firstName')?.touched">
+              Please provide a valid First Name
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" formControlName="email" name="email" autocomplete="email">
+            <div class="error-text" *ngIf="userForm.get('email')?.hasError('required') && userForm.get('email')?.touched">
+              Please provide a valid Email
+            </div>
+            <div class="error-text" *ngIf="userForm.get('email')?.hasError('email') && userForm.get('email')?.touched">
+              Please provide a valid Email
+            </div>
+            <div class="error-text" *ngIf="userForm.get('email')?.hasError('emailExists') && userForm.get('email')?.touched">
+              Email already exists
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Profile</label>
+            <div class="file-input-wrapper">
+               <input type="text" readonly [value]="profileFileName">
+               <input type="file" id="profileInput" (change)="onFileChange($event)" accept="image/*" #fileInput hidden>
+               <button type="button" class="browse-btn" (click)="fileInput.click()">Browse</button>
+            </div>
+            <div class="error-text" *ngIf="isProfileInvalid && !profileSizeError && !profileTypeError">
+              Please selected any profile
+            </div>
+            <div class="error-text" *ngIf="profileTypeError">
+              Invalid file format. Please select an image.
+            </div>
+            <div class="error-text" *ngIf="profileSizeError">
+              Profile image size must not exceed 5MB.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Occupation</label>
+            <select formControlName="occupation">
+              <option value="" disabled selected></option>
+              <option *ngFor="let opt of occupations" [value]="opt">{{ opt }}</option>
+            </select>
+            <div class="error-text" *ngIf="userForm.get('occupation')?.invalid && userForm.get('occupation')?.touched">
+              Please selected any Occupation
+            </div>
+          </div>
+
+          <div class="form-group radio-group">
+            <label>Sex</label>
+            <div class="radios">
+              <input type="radio" id="male" formControlName="sex" value="Male">
+              <label for="male">Male</label>
+              <input type="radio" id="female" formControlName="sex" value="Female">
+              <label for="female">Female</label>
+            </div>
+            <div class="error-text" *ngIf="userForm.get('sex')?.invalid && userForm.get('sex')?.touched">
+              Please select your Sex
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="column">
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" formControlName="lastName" name="lastName" autocomplete="family-name" maxlength="100">
+            <div class="error-text" *ngIf="userForm.get('lastName')?.invalid && userForm.get('lastName')?.touched">
+              Please provide a valid Last Name
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Phone</label>
+            <input type="text" formControlName="phone" name="phone" autocomplete="tel" maxlength="10">
+            <div class="error-text" *ngIf="userForm.get('phone')?.invalid && userForm.get('phone')?.touched">
+              Please provide a valid Phone (9-10 digits)
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Birth Day</label>
+            <input type="date" formControlName="birthDay" name="birthDay" autocomplete="bday">
+            <div class="error-text" *ngIf="userForm.get('birthDay')?.invalid && userForm.get('birthDay')?.touched">
+              Please provide a valid Birth Day
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button type="submit" class="save-btn">Save</button>
+        <button type="button" class="clear-btn" (click)="onClear()">Clear</button>
+      </div>
+    </form>
+  </div>
+</div>
